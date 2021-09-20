@@ -37,3 +37,8 @@ main {
 #inandout {
     text-align: center;
 }
+
+#dateandmoney {
+    display: flex;
+    flex-direction: column;
+}

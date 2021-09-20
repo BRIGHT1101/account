@@ -8,23 +8,30 @@ navbarimg.onclick = e => {
     }
 }
 
-
-
+let selMoney = 0;
 money.onkeyup = e => {
     if (e.keyCode == 13) {
         if (e.target.value.match(/^[0-9]+$/)) {
             if(ckin.checked) {
-                console.log(+e.target.value);
+                selMoney = +e.target.value;
             } else if(ckout.checked) {
-                console.log(-e.target.value);
+                selMoney = -e.target.value;
             }
             e.target.value = '';
         } else {
-            e.target.style.border = "red 2px solid";
-            e.target.value = '';
-            setTimeout(() => {
-                e.target.style.border = "";
-            }, 2000);
+            e.target.value = "잘못된 금액인데요";
+            setTimeout(()=> {
+                e.target.value =''
+            },2000)
         }
     }
+}
+
+const currentDateValue = new Date().toISOString().substring(0, 10);
+seldate.value = currentDateValue;
+seldate.setAttribute("max",currentDateValue);
+
+let selDate = currentDateValue;
+seldate.onchange = e => {
+    selDate = e.target.value;
 }
