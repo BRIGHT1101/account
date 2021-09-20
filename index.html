@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가계부</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer type="module" src="main.js"></script>
+</head>
+<body>
+    <div id="navbar">
+        <img id="navbarimg" src="https://cdn-icons-png.flaticon.com/512/1828/1828551.png" width="20px">
+        <div id="maintitle"> 가계부 </div>
+    </div>
+    <nav id="navlist">
+        <ul id="navul">
+            <li><a href="accountlog.html">지출내역</a></li>
+            <li>통계</li>
+            <li>지출플랜</li>
+        </ul>
+    </nav>
+    <main>
+        <div id="inputmoney">
+            <div id="inandout">
+                <input type="radio" name="inout" id="ckin" checked=><label for="ckin">수입</label>
+                <input type="radio" name="inout" id="ckout"><label for="ckout">지출</label>
+            </div>
+            <input id="money" type="text" placeholder="금액을 입력하세요">
+        </div>
+    </main>
+</body>
+</html>

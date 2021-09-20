@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+#navbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    padding: 8px;
+    box-shadow: 0 0 2px 1px rgba(128, 128, 128, 0.527);
+    background-color: white;
+}
+
+#maintitle {
+    margin: auto;
+}
+
+#navlist {
+    position: fixed;
+    top: 40px;
+    left: -40vw;
+    transition: 0.5s ;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+
+#inputmoney {
+    margin: auto;
+}
+
+#inandout {
+    text-align: center;
+}
