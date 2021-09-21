@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>가계부</title>
+    <title>ACCOUNT BOOK</title>
     <link rel="stylesheet" href="style.css">
     <script defer type="module" src="main.js"></script>
 </head>
 <body>
     <div id="navbar">
-        <img id="navbarimg" src="https://cdn-icons-png.flaticon.com/512/1828/1828551.png" width="20px">
-        <div id="maintitle"> 가계부 </div>
+        <div id="maintitle">ACCOUNT BOOK</a></div>
     </div>
     <nav id="navlist">
         <ul id="navul">
-            <li><a href="accountlog.html">지출내역</a></li>
-            <li>통계</li>
-            <li>지출플랜</li>
+            <li><a href=#chapter1>내역작성</a></li>
+            <li id="chapbutton2"><a href=#chapter2>지출내역</a></li>
+            <li><a href=#chapter3>계획서</a></li>
         </ul>
     </nav>
-    <main>
+    <main id="chapter1">
         <div id="inputmoney">
             <div id="inandout">
                 <input type="radio" name="inout" id="ckin" checked=><label for="ckin">수입</label>
@@ -28,10 +27,40 @@
             </div>
             <div id="dateandmoney">
                 <input id="seldate" type="date">
+                <form>
                 <input id="money" type="text" placeholder="금액을 입력하세요">
+                <button type="submit" id="moneysubmit"><img src="https://cdn-icons-png.flaticon.com/512/1091/1091916.png"></button>
+                </form>
             </div>
-
         </div>
     </main>
+    <section id="chapter2">
+        <h2>Profit and Loss Account</h2>
+        <div id="logsection">
+            <input id="selmonth" type="month">
+            <ul id="loglist"></ul>
+        </div>
+    </section>
+    <section id="chapter3">
+        <h2>이번 달에는 이 정도면?</h2>
+        <form>
+            <select name="moneyfor" id="listsel" multiple size="8">
+                <option value="쇼핑">쇼핑</option>
+                <option value="통신비">통신비</option>
+                <option value="세금">세금</option>
+                <option value="주유비">주유비</option>
+                <option value="적금">적금</option>
+                <option value="교통비">교통비</option>
+                <option value="식비">식비</option>
+                <option value="기타" selected>기타</option>
+            </select>
+            <div>
+                <input id="predictmoney" type="number" placeholder="예상 금액을 입력하세요">
+                <button type="submit" id="premoneysub"><img width="30px" src="https://cdn-icons-png.flaticon.com/512/561/561169.png"></button>
+            </div>
+        </form>
+        <ul id="predicted"></ul>
+    </section>
+    <div id="addcomplete">지출내역에 추가되었습니다!</div>
 </body>
 </html>

@@ -1,33 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600&family=Secular+One&family=Lobster&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Noto Serif KR', 'Secular One',serif, sans-serif;
+}
+
 body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    overflow: hidden;
 }
 
 #navbar {
+    font-family: 'Lobster', cursive;
     display: flex;
     position: sticky;
     top: 0;
     padding: 8px;
     box-shadow: 0 0 2px 1px rgba(128, 128, 128, 0.527);
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.822);
 }
 
 #maintitle {
     margin: auto;
+    font-size: x-large;
 }
 
 #navlist {
+    display: block;
+    width: 100%;
     position: fixed;
-    top: 40px;
-    left: -40vw;
-    transition: 0.5s ;
+    bottom: 0px;
+
+}
+
+#addcomplete {
+    display: none;
+    position: fixed;
+    color: rgb(79, 76, 226);
+    width: 70%;
+    left:50vw;
+    transform: translateX(-50%);
+    bottom: 70px;
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(216, 215, 215, 0.301);
+    border-radius: 5px;
+}
+
+#navul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: space-between;
+}
+
+#navul li {
+    margin: auto;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border : 1px solid grey;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 main {
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    height: 100vh;
+    transition: 1s;
 }
 
 #inputmoney {
@@ -41,4 +86,138 @@ main {
 #dateandmoney {
     display: flex;
     flex-direction: column;
+}
+
+#seldate,#selmonth,#predictmoney {
+    font-family: 'Noto Serif KR';
+    outline: none;
+    border : none;
+    margin : 10px 0;
+    padding : 10px;
+    border : 2px dashed rgba(128, 128, 128, 0.5);
+    font-size: large;
+    color: rgb(128, 128, 128);
+}
+
+#money {
+    outline: none;
+    margin: auto auto 5px auto;
+    border : 2px dashed rgba(128, 128, 128, 0.5);
+    padding: 10px;
+}
+
+form {
+    display: flex;
+    margin-top: 5px;
+}
+
+#moneysubmit {
+    background-color: transparent;
+    border: none;
+    margin: auto;
+    cursor: pointer;
+}
+
+#moneysubmit img{
+    width: 30px;
+    margin: auto 0 auto 5px ;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    transition: 1s;
+}
+
+h2 {
+    margin-top: 50px;
+    font-family: 'Lobster', cursive;
+}
+
+#loglist {
+    font-family: 'Secular One','Noto Serif KR';
+    list-style: none;
+    padding: 0;
+    margin: 10px 20px;
+}
+
+#loglist li {
+    display: flex;
+    justify-content: space-between;
+    font-size: larger;
+}
+
+#stotal {
+    text-align: end;
+    margin: 10px 0;
+    font-size: x-large;
+}
+
+#chapter3 h2 {
+    font-family: 'Noto Serif KR';
+}
+
+#predictmoney {
+    margin: auto 3px;
+    text-align: center;
+}
+
+#chapter3 form {
+    flex-direction: column;
+}
+
+#listsel {
+    font-family: 'Noto Serif KR';
+    outline: none;
+    border : none;
+    margin : 10px 10px;
+    padding : 10px;
+    border : 2px dashed rgba(128, 128, 128, 0.5);
+    font-size: large;
+    color: rgb(128, 128, 128);
+    text-align: center;
+}
+
+#chapter3>form>div {
+    display: flex;
+    justify-content: center;
+}
+#premoneysub {
+    background-color: transparent;
+    border: none;
+    margin: auto 0;
+}
+
+#predicted {
+    padding: 5px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 4px 0 grey;
+}
+
+#predicted li {
+    border-radius: 6px;
+    background-color: rgb(236, 236, 236);
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 2px;
+}
+
+#predicted li div:nth-child(2) {
+    display: flex;
+}
+
+#predicted>div {
+    font-size: larger;
+    margin: 5px;
+}
+
+.prelistclose {
+    margin: 2px 0 2px 5px;
 }
