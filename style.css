@@ -3,6 +3,7 @@
 html {
     scroll-behavior: smooth;
     font-family: 'Noto Serif KR', 'Secular One',serif, sans-serif;
+    touch-action: pan-y;
 }
 
 body {
